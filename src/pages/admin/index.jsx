@@ -16,7 +16,7 @@ export default class Admin extends Component {
 
   handleLogout = () => {
     localStorage.removeItem('token')
-    return this.props.history.push('https://turagon.github.io/resume-frontend/')
+    return this.props.history.push('/')
   }
 
   render() {

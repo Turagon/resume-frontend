@@ -49,7 +49,7 @@ export default class UserCoverLetter extends Component {
 
     return (
       <div className="user-coverLetter">
-        <ReactMarkdown children={ coverLetter.content } className="user-letter-content"/>
+        <ReactMarkdown children={ coverLetter.content || '' } className="user-letter-content"/>
       </div>
     )
   }
