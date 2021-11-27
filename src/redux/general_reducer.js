@@ -1,5 +1,5 @@
 
-const initGeneralState = { user: '', open: false, error: '', display: true, adminBaseURL: 'http://localhost:3001/admin', userBaseURL: 'http://localhost:3001/user' }
+const initGeneralState = { user: '', open: false, error: '', display: true, adminBaseURL: 'https://turagon.github.io/resume-frontend/admin', userBaseURL: 'https://turagon.github.io/resume-frontend/user' }
 export default function generalReducer(preState = initGeneralState, action) {
   const { type, data } = action
 
