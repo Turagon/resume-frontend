@@ -22,7 +22,7 @@ export default class Login extends Component {
       return this.setState({ passwordWarning: true })
     }
 
-    axios.post('https://turagon.github.io/resume-frontend/', {name, password})
+    axios.post('https://rex-resume.herokuapp.com/', {name, password})
     .then(response => {
       if (response.data.status === 'error') {
         store.dispatch({ type: 'editError', data: response.data.message })
