@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import store from '../../../redux/store'
 import './userSkills.css'
+
 const { userBaseURL } = store.getState().generalReducer 
 
 export default class UserSkills extends Component {
@@ -17,8 +18,7 @@ export default class UserSkills extends Component {
       }
     }
 
-    // axios.get(`${userBaseURL}/skill`, config)
-    axios.get(`/user/skill`, config)
+    axios.get(`${userBaseURL}/skill`, config)
       .then(response => {
         if (response.data.status === 'error') return
         const { skills } = response.data || []
