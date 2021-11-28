@@ -22,6 +22,7 @@ export default class UserHeader extends Component {
       .then(response => {
         if (response.data.status === 'error') return
         const { personInfo } = response.data
+        console.log("🚀 ~ file: index.jsx ~ line 25 ~ UserHeader ~ componentDidMount ~ response.data", response.data)
         this.setState({ personInfo })
       })
       .catch(err => console.log(err))

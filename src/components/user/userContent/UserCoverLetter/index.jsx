@@ -14,7 +14,7 @@ export default class UserCoverLetter extends Component {
 
     if (!token) {
       this.handleError('Please login first')
-      return this.props.history.push('/resume-frontend/')
+      return this.props.history.push('/')
     }
 
     const config = {
@@ -26,6 +26,7 @@ export default class UserCoverLetter extends Component {
     axios.get(`${userBaseURL}/letter`, config)
       .then(response => {
         const { coverLetter } = response.data
+        console.log("🚀 ~ file: index.jsx ~ line 29 ~ UserCoverLetter ~ componentDidMount ~ response.data", response.data)
         this.resetError()
         this.setState({ coverLetter })
       })

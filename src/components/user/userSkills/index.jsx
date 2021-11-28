@@ -21,6 +21,7 @@ export default class UserSkills extends Component {
       .then(response => {
         if (response.data.status === 'error') return
         const { skills } = response.data
+        console.log("🚀 ~ file: index.jsx ~ line 24 ~ UserSkills ~ componentDidMount ~ response.data", response.data)
         this.setState({ skills })
       })
       .catch(err => console.log(err))
