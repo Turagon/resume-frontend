@@ -32,8 +32,12 @@ export default class UserList extends Component {
       }
 
       const { users, user} = response.data
-      store.dispatch({ type: 'editUser', data: user })
-      this.setState({ users })
+      if (user) {
+        store.dispatch({ type: 'editUser', data: user })
+      }
+      if (users && users.length) {
+        this.setState({ users })
+      }
     })
     .catch(err => console.log(err))
   }

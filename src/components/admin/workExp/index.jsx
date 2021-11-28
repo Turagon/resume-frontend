@@ -14,7 +14,6 @@ export default class WorkExp extends Component {
 
   componentDidMount() {
     const token = localStorage.getItem('token')
-    console.log("🚀 ~ file: index.jsx ~ line 17 ~ WorkExp ~ componentDidMount ~ token", token)
     if (!token) {
       this.handleError('Please login first')
       return this.props.history.push('/')

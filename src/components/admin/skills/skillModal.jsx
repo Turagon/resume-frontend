@@ -36,7 +36,7 @@ export default class SkillModal extends Component {
             this.props.onClose()
             return handleError(error)
           }
-          const data = response.data.skill
+          const data = response.data.skill || ''
           this.props.onClose()
           return updateSkills('edit', data)
         })
@@ -57,7 +57,7 @@ export default class SkillModal extends Component {
             this.props.onClose()
             return handleError(error)
           }
-          const data = response.data.skill
+          const data = response.data.skill || ''
           this.props.onClose()
           return updateSkills('add', data)
         })

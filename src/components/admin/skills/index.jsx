@@ -27,7 +27,7 @@ export default class Skill extends Component {
 
     axios.get(`${adminBaseURL}/skill`, config)
       .then(response => {
-        const { skills } = response.data
+        const { skills } = response.data || []
         this.setState({ skills })
       })
       .catch(err => console.log(err))

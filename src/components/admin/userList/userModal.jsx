@@ -42,7 +42,7 @@ export default class UserModal extends Component {
           this.props.onClose()
           return handleError(error)
         }
-        const data = response.data.user
+        const data = response.data.user || ''
         this.props.onClose()
         return updateUsers('edit', data)
       })
@@ -67,7 +67,7 @@ export default class UserModal extends Component {
             this.props.onClose()
             return handleError(error)
           }
-          const data = response.data.user
+          const data = response.data.user || ''
           this.props.onClose()
           return updateUsers('add', data)
         })
