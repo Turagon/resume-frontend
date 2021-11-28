@@ -5,6 +5,14 @@ module.exports = function (app) {
     proxy('/', {
       target: 'https://rex-resume.herokuapp.com/',
       changeOrigin: true,
+    }),
+    proxy('/user', {
+      target: 'https://rex-resume.herokuapp.com/user',
+      changeOrigin: true,
+    }),
+    proxy('/admin', {
+      target: 'https://rex-resume.herokuapp.com/admin',
+      changeOrigin: true,
     })
   )
 }
