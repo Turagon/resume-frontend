@@ -25,8 +25,7 @@ export default class UserCoverLetter extends Component {
 
     axios.get(`${userBaseURL}/letter`, config)
       .then(response => {
-        const { coverLetter } = response.data
-        console.log("🚀 ~ file: index.jsx ~ line 29 ~ UserCoverLetter ~ componentDidMount ~ response.data", response.data)
+        const { coverLetter } = response.data || ''
         this.resetError()
         this.setState({ coverLetter })
       })

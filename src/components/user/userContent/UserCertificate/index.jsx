@@ -24,7 +24,7 @@ export default class UserCertificate extends Component {
 
     axios.get(`${userBaseURL}/certificate`, config)
       .then(response => {
-        const { certificates } = response.data
+        const { certificates } = response.data || []
         this.resetError()
         this.setState({ certificates })
       })

@@ -14,6 +14,7 @@ export default class WorkExp extends Component {
 
   componentDidMount() {
     const token = localStorage.getItem('token')
+    console.log("🚀 ~ file: index.jsx ~ line 17 ~ WorkExp ~ componentDidMount ~ token", token)
     if (!token) {
       this.handleError('Please login first')
       return this.props.history.push('/')
@@ -27,7 +28,7 @@ export default class WorkExp extends Component {
 
     axios.get(`${ adminBaseURL }/work`, config)
       .then(response => {
-        const { works } = response.data
+        const { works } = response.data || []
         this.setState({ works })
       })
       .catch(err => console.log(err))

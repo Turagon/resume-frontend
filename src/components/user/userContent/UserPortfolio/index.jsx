@@ -26,7 +26,7 @@ export default class UserPortfolio extends Component {
 
     axios.get(`${userBaseURL}/portfolio`, config)
       .then(response => {
-        const { portfolios } = response.data
+        const { portfolios } = response.data || []
         this.resetError()
         this.setState({ portfolios })
       })

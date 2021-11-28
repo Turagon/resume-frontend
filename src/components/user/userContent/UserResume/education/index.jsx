@@ -25,7 +25,7 @@ export default class Educations extends Component {
 
     axios.get(`${userBaseURL}/education`, config)
       .then(response => {
-        const { educations } = response.data
+        const { educations } = response.data || []
         this.setState({ educations })
       })
       .catch(err => console.log(err))

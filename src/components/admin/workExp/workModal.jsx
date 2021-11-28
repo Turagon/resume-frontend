@@ -41,7 +41,7 @@ export default class WorkModal extends Component {
             this.props.onClose()
             return handleError(error)
           }
-          const data = response.data.work
+          const data = response.data.work || ''
           this.props.onClose()
           return updateWorks('edit', data)
         })
@@ -67,7 +67,7 @@ export default class WorkModal extends Component {
             this.props.onClose()
             return handleError(error)
           }
-          const data = response.data.work
+          const data = response.data.work || ''
           this.props.onClose()
           return updateWorks('add', data)
         })

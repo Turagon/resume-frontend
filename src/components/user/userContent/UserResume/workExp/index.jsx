@@ -26,7 +26,7 @@ export default class WorkExperiences extends Component {
 
     axios.get(`${userBaseURL}/work`, config)
       .then(response => {
-        const { works } = response.data
+        const { works } = response.data || []
         this.resetError()
         this.setState({ works })
       })
