@@ -17,8 +17,8 @@ export default class UserSkills extends Component {
       }
     }
 
-    // axios.get(`${userBaseURL}/skill`, config)
-    axios.get(`/user/skill`, config)
+    // axios.get(`/user/skill`, config)
+    axios.get(`${userBaseURL}/skill`, config)
       .then(response => {
         if (response.data.status === 'error') return
         const { skills } = response.data || []
