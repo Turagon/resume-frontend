@@ -1,5 +1,5 @@
 
-const initGeneralState = { user: '', open: false, error: '', display: true, adminBaseURL: 'https://turagon.github.io/resume-frontend/admin', userBaseURL: 'https://turagon.github.io/resume-frontend/user' }
+const initGeneralState = { user: '', open: false, error: '', display: true, adminBaseURL: 'https://rex-resume.herokuapp.com/admin', userBaseURL: 'https://rex-resume.herokuapp.com/user' }
 export default function generalReducer(preState = initGeneralState, action) {
   const { type, data } = action
 
