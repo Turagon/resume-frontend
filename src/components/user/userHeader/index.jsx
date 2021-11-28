@@ -19,7 +19,7 @@ export default class UserHeader extends Component {
     }
 
     // axios.get(`${userBaseURL}/person`, config)
-    axios.get(`/person`, config)
+    axios.get(`/user/person`, config)
       .then(response => {
         if (response.data.status === 'error') return
         const { personInfo } = response.data || ''
