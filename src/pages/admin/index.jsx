@@ -31,26 +31,34 @@ export default class Admin extends Component {
           </div>
         </header>
         <div className="admin-links">
-          <MyNavLink to='/admin/user'>User List</MyNavLink>
+          <MyNavLink to='/resume-frontend/admin/user'>User List</MyNavLink>
+          <MyNavLink to='/resume-frontend/admin/workExp'>Work Exps</MyNavLink>
+          <MyNavLink to='/resume-frontend/admin/education'>Education</MyNavLink>
+          <MyNavLink to='/resume-frontend/admin/skill'>Skills</MyNavLink>
+          <MyNavLink to='/resume-frontend/admin/personInfo'>Personal Info</MyNavLink>
+          <MyNavLink to='/resume-frontend/admin/portfolio'>Portfolios</MyNavLink>
+          <MyNavLink to='/resume-frontend/admin/coverletter'>Cover Letter</MyNavLink>
+          <MyNavLink to='/resume-frontend/admin/certificate'>Certificates</MyNavLink>
+          {/* <MyNavLink to='/admin/user'>User List</MyNavLink>
           <MyNavLink to='/admin/workExp'>Work Exps</MyNavLink>
           <MyNavLink to='/admin/education'>Education</MyNavLink>
           <MyNavLink to='/admin/skill'>Skills</MyNavLink>
           <MyNavLink to='/admin/personInfo'>Personal Info</MyNavLink>
           <MyNavLink to='/admin/portfolio'>Portfolios</MyNavLink>
           <MyNavLink to='/admin/coverletter'>Cover Letter</MyNavLink>
-          <MyNavLink to='/admin/certificate'>Certificates</MyNavLink>
+          <MyNavLink to='/admin/certificate'>Certificates</MyNavLink> */}
         </div>
         <div>
           <Switch>
-            <Route path="/admin/user" component={UserList} />
-            <Route path="/admin/workExp" component={WorkExp} />
-            <Route path="/admin/education" component={Education} />
-            <Route path="/admin/skill" component={Skill} />
-            <Route path="/admin/personInfo" component={PersonInfo} />
-            <Route path="/admin/portfolio" component={Portfolio} />
-            <Route path="/admin/coverletter" component={CoverLetter} />
-            <Route path="/admin/certificate" component={Certificate} />
-            <Redirect to="/admin/user" />
+            <Route path="/resume-frontend/admin/user" component={UserList} />
+            <Route path="/resume-frontend/admin/workExp" component={WorkExp} />
+            <Route path="/resume-frontend/admin/education" component={Education} />
+            <Route path="/resume-frontend/admin/skill" component={Skill} />
+            <Route path="/resume-frontend/admin/personInfo" component={PersonInfo} />
+            <Route path="/resume-frontend/admin/portfolio" component={Portfolio} />
+            <Route path="/resume-frontend/admin/coverletter" component={CoverLetter} />
+            <Route path="/resume-frontend/admin/certificate" component={Certificate} />
+            <Redirect to="/resume-frontend/admin/user" />
           </Switch>
         </div>
       </div>

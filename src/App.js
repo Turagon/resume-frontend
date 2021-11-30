@@ -20,7 +20,8 @@ export default class App extends Component {
         <Switch>
           <Route path="/resume-frontend/user" component={User}/>
           {/* <Route path="/user" component={User}/> */}
-          <Route path="/admin" component={Admin}/>
+          <Route path="/resume-frontend/admin" component={Admin}/>
+          {/* <Route path="/admin" component={Admin}/> */}
           <Route path="/" component={Login}/>
           <Redirect to="/"/>
         </Switch>
