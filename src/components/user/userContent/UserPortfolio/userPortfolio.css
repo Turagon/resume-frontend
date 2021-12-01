@@ -37,3 +37,7 @@
   padding: 3px;
   margin-top: 6px;
 }
+
+.portfolio-content p {
+  font-size: 12px;
+}
