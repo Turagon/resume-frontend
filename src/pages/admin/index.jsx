@@ -39,14 +39,6 @@ export default class Admin extends Component {
           <MyNavLink to='/resume-frontend/admin/portfolio'>Portfolios</MyNavLink>
           <MyNavLink to='/resume-frontend/admin/coverletter'>Cover Letter</MyNavLink>
           <MyNavLink to='/resume-frontend/admin/certificate'>Certificates</MyNavLink>
-          {/* <MyNavLink to='/admin/user'>User List</MyNavLink>
-          <MyNavLink to='/admin/workExp'>Work Exps</MyNavLink>
-          <MyNavLink to='/admin/education'>Education</MyNavLink>
-          <MyNavLink to='/admin/skill'>Skills</MyNavLink>
-          <MyNavLink to='/admin/personInfo'>Personal Info</MyNavLink>
-          <MyNavLink to='/admin/portfolio'>Portfolios</MyNavLink>
-          <MyNavLink to='/admin/coverletter'>Cover Letter</MyNavLink>
-          <MyNavLink to='/admin/certificate'>Certificates</MyNavLink> */}
         </div>
         <div>
           <Switch>

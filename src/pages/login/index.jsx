@@ -37,11 +37,9 @@ export default class Login extends Component {
       
       if (type === 'user') {
         return this.props.history.push('/resume-frontend/user')
-        // return this.props.history.push('/user')
       } else if (type === 'admin') {
         this.resetError()
         return this.props.history.push('/resume-frontend/admin')
-        // return this.props.history.push('/admin')
       }
     })
     .catch(err => console.log(err))

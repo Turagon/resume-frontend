@@ -16,10 +16,6 @@ export default class UserContent extends Component {
           <MyNavLink to='/resume-frontend/user/resume'>Resume</MyNavLink>
           <MyNavLink to='/resume-frontend/user/portfolio'>Portfolio</MyNavLink>
           <MyNavLink to='/resume-frontend/user/certificate'>Certificates</MyNavLink>
-          {/* <MyNavLink to='/user/coverletter'>Cover Letter</MyNavLink>
-          <MyNavLink to='/user/resume'>Resume</MyNavLink>
-          <MyNavLink to='/user/portfolio'>Portfolio</MyNavLink>
-          <MyNavLink to='/user/certificate'>Certificates</MyNavLink> */}
         </div>
         <div>
           <Switch>
@@ -28,11 +24,6 @@ export default class UserContent extends Component {
             <Route path="/resume-frontend/user/portfolio" component={UserPortfolio} />
             <Route path="/resume-frontend/user/certificate" component={UserCertificate} />
             <Redirect to="/resume-frontend/user/coverletter" />
-            {/* <Route path="/user/coverletter" component={UserCoverLetter} />
-            <Route path="/user/resume" component={UserResume} />
-            <Route path="/user/portfolio" component={UserPortfolio} />
-            <Route path="/user/certificate" component={UserCertificate} />
-            <Redirect to="/user/coverletter" /> */}
           </Switch>
         </div>
       </div>

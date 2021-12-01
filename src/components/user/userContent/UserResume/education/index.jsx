@@ -14,7 +14,7 @@ export default class Educations extends Component {
 
     if (!token) {
       this.handleError('Please login first')
-      return this.props.history.push('/')
+      return this.props.history.push('/resume-frontend/')
     }
 
     const config = {
