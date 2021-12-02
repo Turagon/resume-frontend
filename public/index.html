@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;600&display=swap" rel="stylesheet">
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
-      (function (l) {
+      let l = window.location
+      const change = (l) => {
         if (l.search[1] === '/') {
           let decoded = l.search.slice(1).split('&').map(function (s) {
             return s.replace(/~and~/g, '&')
@@ -24,7 +25,8 @@
             l.pathname.slice(0, -1) + decoded + l.hash
           )
         }
-      }(window.location))
+      }
+      change(l)
     </script>
     <title>Rex Resume</title>
   </head>
