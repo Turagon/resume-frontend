@@ -80,7 +80,7 @@ export default class Login extends Component {
 
           <div className="input-password-box">
             <label htmlFor="input-password"><i className="fas fa-key"></i>Password</label>
-            <input onChange={this.handlePasswordChange} onFocus={() => this.setState({ passwordWarning: false })} type="text" maxLength="40" id="input-password" name="password" placeholder="case sensitive"/>
+            <input onChange={this.handlePasswordChange} onFocus={() => this.setState({ passwordWarning: false })} type="password" maxLength="40" id="input-password" name="password" placeholder="case sensitive"/>
             <span style={{ display: passwordWarning ? 'block' : 'none' }}>password can't be empty</span>
           </div>
 
