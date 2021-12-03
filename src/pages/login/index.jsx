@@ -9,6 +9,7 @@ export default class Login extends Component {
     password: '',
     nameWarning: false,
     passwordWarning: false,
+    isLoading: false
   }
 
   handleSubmit = e => {
@@ -17,14 +18,16 @@ export default class Login extends Component {
     if (!name) {
       return this.setState({ nameWarning: true })
     }
-
+    
     if (!password) {
       return this.setState({ passwordWarning: true })
     }
-
+    
+    this.setState({ isLoading: true })
     axios.post('https://rex-resume.herokuapp.com/', {name, password})
     .then(response => {
       if (response.data.status === 'error') {
+        this.setState({ isLoading: false })
         store.dispatch({ type: 'editError', data: response.data.message })
         store.dispatch({ type: 'editDisplay', data: false })
         return
@@ -34,18 +37,23 @@ export default class Login extends Component {
       const { name, type } = response.data.user
       store.dispatch({type: 'editGeneralUsername', data: name})
       localStorage.setItem('token', token)
-      
       if (type === 'user') {
+        this.resetError()
         return this.props.history.push('/resume-frontend/user')
       } else if (type === 'admin') {
         this.resetError()
         return this.props.history.push('/resume-frontend/admin')
       }
     })
-    .catch(err => console.log(err))
+    .catch(err => {
+      this.setState({ isLoading: false })
+      store.dispatch({ type: 'editError', data: err.message })
+      store.dispatch({ type: 'editDisplay', data: false })
+    })
   } 
-
+  
   resetError = () => {
+    this.setState({ isLoading: false })
     store.dispatch({ type: 'editError', data: '' })
     store.dispatch({ type: 'editDisplay', data: true })
     return 
@@ -62,11 +70,12 @@ export default class Login extends Component {
   }
 
   render() {
-    const { nameWarning, passwordWarning } = this.state
+    const { nameWarning, passwordWarning, isLoading } = this.state
     const { error, display } = store.getState().generalReducer
     return (
       <div className="login">
-        <h3>Thank you for visiting my resume</h3>
+        <h3 style={{ display: isLoading ? 'none' : 'block' }}>Thank you for visiting my resume</h3>
+        <h3 style={{ display: isLoading ? 'block' : 'none' }}>Loading</h3>
         <div style={{ display: display ? 'none' : 'block' }} className="login-warning">
           <span>{error}</span>
           <button onClick={this.resetError}>X</button>
