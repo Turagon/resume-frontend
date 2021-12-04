@@ -73,28 +73,30 @@ export default class Login extends Component {
     const { nameWarning, passwordWarning, isLoading } = this.state
     const { error, display } = store.getState().generalReducer
     return (
-      <div className="login">
-        <h3 style={{ display: isLoading ? 'none' : 'block' }}>Thank you for visiting my resume</h3>
-        <h3 style={{ display: isLoading ? 'block' : 'none' }}>Loading</h3>
-        <div style={{ display: display ? 'none' : 'block' }} className="login-warning">
-          <span>{error}</span>
-          <button onClick={this.resetError}>X</button>
+      <div className="login-container">
+        <div className="login">
+          <h3 style={{ display: isLoading ? 'none' : 'block' }}>Thank you for visiting my resume</h3>
+          <h3 style={{ display: isLoading ? 'block' : 'none' }}>Loading</h3>
+          <div style={{ display: display ? 'none' : 'block' }} className="login-warning">
+            <span>{error}</span>
+            <button onClick={this.resetError}>X</button>
+          </div>
+          <form onSubmit={this.handleSubmit} className="login-form">
+            <div className="input-name-box">
+              <label htmlFor="input-name"><i className="far fa-user"></i>Name</label>
+              <input onChange={ this.handleNameChange } onFocus={() => this.setState({nameWarning: false})} type="text" maxLength="40" id="input-name" name="name" placeholder="case sensitive"/>
+              <span style={{ display: nameWarning ? 'block' : 'none' }}>name can't be empty</span>
+            </div>
+
+            <div className="input-password-box">
+              <label htmlFor="input-password"><i className="fas fa-key"></i>Password</label>
+              <input onChange={this.handlePasswordChange} onFocus={() => this.setState({ passwordWarning: false })} type="password" maxLength="40" id="input-password" name="password" placeholder="case sensitive"/>
+              <span style={{ display: passwordWarning ? 'block' : 'none' }}>password can't be empty</span>
+            </div>
+
+            <button type="submit" className="signin-btn">Submit</button>
+          </form>
         </div>
-        <form onSubmit={this.handleSubmit} className="login-form">
-          <div className="input-name-box">
-            <label htmlFor="input-name"><i className="far fa-user"></i>Name</label>
-            <input onChange={ this.handleNameChange } onFocus={() => this.setState({nameWarning: false})} type="text" maxLength="40" id="input-name" name="name" placeholder="case sensitive"/>
-            <span style={{ display: nameWarning ? 'block' : 'none' }}>name can't be empty</span>
-          </div>
-
-          <div className="input-password-box">
-            <label htmlFor="input-password"><i className="fas fa-key"></i>Password</label>
-            <input onChange={this.handlePasswordChange} onFocus={() => this.setState({ passwordWarning: false })} type="password" maxLength="40" id="input-password" name="password" placeholder="case sensitive"/>
-            <span style={{ display: passwordWarning ? 'block' : 'none' }}>password can't be empty</span>
-          </div>
-
-          <button type="submit" className="signin-btn">Submit</button>
-        </form>
       </div>
     )
   }
