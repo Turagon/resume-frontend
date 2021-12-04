@@ -61,7 +61,7 @@ export default class UserCertificate extends Component {
                       <span>Name : {item.name}</span>
                       <span>Institution : {item.institution}</span>
                       <span>Date : {item.date}</span>
-                      <a href={item.image}>Link : {item.image}</a>
+                      <a href={item.image} target="_blank" rel="noreferrer">Link : {item.image}</a>
                     </div>
                   </div>
                 </div>

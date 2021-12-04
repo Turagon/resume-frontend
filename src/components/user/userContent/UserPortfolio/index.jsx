@@ -61,8 +61,8 @@ export default class UserPortfolio extends Component {
                   </div>
                   <div className="user-portfolio-linkBox">
                     <span>Name : {item.name}</span>
-                    <span>Github : <a href={item.github}>{item.github}</a></span>
-                    <span>Web Link : <a href={item.heroku}>{item.heroku}</a></span>
+                    <span>Github : <a href={item.github} target="_blank" rel="noreferrer">{item.github}</a></span>
+                    <span>Web Link : <a href={item.heroku} target="_blank" rel="noreferrer">{item.heroku}</a></span>
                   </div>
                 </div>
                 <div className="user-portfolio-lower">
