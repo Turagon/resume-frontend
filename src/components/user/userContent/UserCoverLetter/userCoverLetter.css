@@ -13,6 +13,6 @@
   scrollbar-width: none;  /* Firefox */
 }
 
-.user-letter-content p {
+.user-letter-content .user-letter-content p {
   font-size: 12px;
 }
