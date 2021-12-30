@@ -46,6 +46,10 @@
   scrollbar-width: none;  /* Firefox */
 }
 
+.user-description p {
+  font-size: 12px;
+}
+
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
