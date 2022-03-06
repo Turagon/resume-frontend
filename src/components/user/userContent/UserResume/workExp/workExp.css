@@ -16,7 +16,7 @@
   margin: 0;
   padding: 3px;
   color: white;
-  background-color: #bb3e03;
+  background-color: #70e000;
 }
 
 .user-title, .user-period {
@@ -30,14 +30,14 @@
 }
 
 .user-workExp {
-  max-height: 250px;
+  max-height: 350px;
   border: 1px solid lightgrey;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   padding: 3px;
 }
 
 .user-description {
-  height: 66px;
+  max-height: 200px;
   border-top: 2px solid lightgrey;
   overflow:hidden;
   overflow-y: scroll;
