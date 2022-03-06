@@ -14,7 +14,8 @@
 
 .user-workExps-sub {
   margin: 0;
-  padding: 3px;
+  padding: 6px;
+  font-size: 24px;
   color: white;
   background-color: #70e000;
 }
