@@ -4,7 +4,7 @@
 
 .user-workExps {
   padding: 3px;
-  height: 322px;
+  max-height: 750px;
   overflow:hidden;
   overflow-y: scroll;
   -webkit-box-orient: vertical;
@@ -21,7 +21,7 @@
 
 .user-title, .user-period {
   display: flex;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .user-workExp {
-  height: 100px;
+  max-height: 250px;
   border: 1px solid lightgrey;
   margin-bottom: 8px;
   padding: 3px;
@@ -47,7 +47,7 @@
 }
 
 .user-workExp .user-description p, .user-workExp .user-description li {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 ::-webkit-scrollbar {
