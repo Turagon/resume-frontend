@@ -50,7 +50,7 @@ export default class WorkExperiences extends Component {
 
     return (
       <div className="user-workExps-box">
-        <h5 className="user-workExps-sub">Work Experiences</h5>
+        <h4 className="user-workExps-sub">Work Experiences</h4>
         <div className="user-workExps">
         {
           works.map(item => {

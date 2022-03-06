@@ -38,7 +38,7 @@
 }
 
 .user-description {
-  max-height: 200px;
+  max-height: 300px;
   border-top: 2px solid lightgrey;
   overflow:hidden;
   overflow-y: scroll;

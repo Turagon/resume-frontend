@@ -48,7 +48,7 @@ export default class Educations extends Component {
 
     return (
       <div className="user-educations-box">
-        <h5 className="user-educations-sub">Educations</h5>
+        <h4 className="user-educations-sub">Educations</h4>
         <div className="user-educations">
           {
             educations.map(item => {
